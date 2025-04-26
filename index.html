@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>قائمة الأزواج</title>
+</head>
+<body>
+    <h1>قائمة أزواج الحمام</h1>
+    <a href="/add">➕ إضافة زوج جديد</a> | <a href="/logout">🚪 تسجيل الخروج</a>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>اسم الزوج</th>
+            <th>عدد البيض</th>
+            <th>تاريخ الفقس المتوقع</th>
+            <th>العلاج</th>
+            <th>مدة التحريم</th>
+            <th>مرات الإنتاج الناجحة</th>
+            <th>خيارات</th>
+        </tr>
+        {% for pair in pairs %}
+        <tr>
+            <td>{{ pair.pair_name }}</td>
+            <td>{{ pair.egg_count }}</td>
+            <td>{{ pair.hatch_date }}</td>
+            <td>{{ pair.treatment }}</td>
+            <td>{{ pair.withdrawal_days }}</td>
+            <td>{{ pair.successful_breeds }}</td>
+            <td>
+                <a href="/edit/{{ pair.id }}">تعديل</a> |
+                <a href="/delete/{{ pair.id }}">حذف</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

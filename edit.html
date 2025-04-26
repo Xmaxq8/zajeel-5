@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل بيانات الزوج</title>
+</head>
+<body>
+    <h1>✏️ تعديل بيانات الزوج</h1>
+    <form method="post">
+        <input type="text" name="pair_name" value="{{ pair.pair_name }}" required><br><br>
+        <input type="number" name="egg_count" value="{{ pair.egg_count }}" required><br><br>
+        <input type="number" name="hatch_days" placeholder="كم يوم للتفقيس الجديد" required><br><br>
+        <input type="text" name="treatment" value="{{ pair.treatment }}" required><br><br>
+        <input type="number" name="withdrawal_days" value="{{ pair.withdrawal_days }}" required><br><br>
+        <input type="number" name="successful_breeds" value="{{ pair.successful_breeds }}" required><br><br>
+        <button type="submit">حفظ التعديلات</button>
+    </form>
+    <br>
+    <a href="/">🔙 الرجوع للقائمة</a>
+</body>
+</html>
