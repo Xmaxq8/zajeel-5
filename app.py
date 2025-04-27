@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pigeons.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://zajeel_db_user:wnd5CY0zyLTvEexW0mUhtn7UlHq4hVBR@dpg-d06nrlpr0fns73fqvlgg-a.oregon-postgres.render.com/zajeel_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'your_secret_key_here'
 
